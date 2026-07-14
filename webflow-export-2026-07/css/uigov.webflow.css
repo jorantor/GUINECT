@@ -12903,12 +12903,8 @@ html.w-mod-js [data-ix="click-yellow"], html.w-mod-js [data-ix="show-off-button"
   }
 
   .tabs-menu-22 {
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    grid-column-gap: 33px;
+    grid-row-gap: 33px;
   }
 
   .neutral_survey_option {
@@ -12992,5 +12988,52 @@ html.w-mod-js [data-ix="click-yellow"], html.w-mod-js [data-ix="show-off-button"
   grid-template-rows: auto;
   grid-template-columns: .25fr 1.75fr;
 }
+/* Selected icon cards */
+.button.guinect-selected {
+  background-color: #3f5878 !important;
+  border-color: #1f334d !important;
+  box-shadow: 0 8px 18px rgba(31, 51, 77, 0.22) !important;
+  transform: scale(0.98);
+  opacity: 1 !important;
+}
 
+.button.guinect-selected .text-block-284 {
+  color: #ffffff !important;
+}
+
+.button.guinect-selected img {
+  filter: brightness(0) invert(1) opacity(0.85);
+}
+
+/* Selected green options */
+.green_survey_option.guinect-selected {
+  background-color: #36a313 !important;
+  border-color: #36a313 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Selected yellow options */
+.yellow_survey_option.guinect-selected {
+  background-color: #e6bd00 !important;
+  border-color: #e6bd00 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Selected red options */
+.red_survey_option.guinect-selected {
+  background-color: #ed0b0b !important;
+  border-color: #ed0b0b !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Selected neutral options */
+.neutral_survey_option.guinect-selected {
+  background-color: #4f6f8f !important;
+  border-color: #4f6f8f !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
 
