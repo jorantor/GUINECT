@@ -9554,7 +9554,7 @@ a {
   display: flex;
 }
 
-.text-field-24 {
+.survey_comments {
   border: 1px solid var(--light-steel-blue);
   border-radius: 5px;
   width: 100%;
@@ -10577,6 +10577,34 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  display: flex;
+}
+
+.survey_button {
+  border: 2px solid var(--black-2);
+  background-color: var(--white);
+  min-width: 200px;
+  max-width: 250px;
+  height: 50px;
+  color: var(--black-2);
+  border-radius: 5px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  display: flex;
+}
+
+.survey_button:hover {
+  background-color: var(--dark-orange);
+  color: var(--white);
+  border-style: none;
+}
+
+.survey_button_wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   display: flex;
 }
 
@@ -12866,7 +12894,7 @@ html.w-mod-js [data-ix="click-yellow"], html.w-mod-js [data-ix="show-off-button"
     font-size: 11px;
   }
 
-  .text-field-24 {
+  .survey_comments {
     font-size: 12px;
   }
 
@@ -12903,8 +12931,12 @@ html.w-mod-js [data-ix="click-yellow"], html.w-mod-js [data-ix="show-off-button"
   }
 
   .tabs-menu-22 {
-    grid-column-gap: 33px;
-    grid-row-gap: 33px;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .neutral_survey_option {
@@ -12988,6 +13020,12 @@ html.w-mod-js [data-ix="click-yellow"], html.w-mod-js [data-ix="show-off-button"
   grid-template-rows: auto;
   grid-template-columns: .25fr 1.75fr;
 }
+/* ==================================================
+   GUINECT CUSTOM PRODUCT CODE
+   Manual styles added after Webflow export.
+   Do not remove without checking product behavior.
+================================================== */
+
 /* Selected icon cards */
 .button.guinect-selected {
   background-color: #3f5878 !important;
@@ -13002,38 +13040,93 @@ html.w-mod-js [data-ix="click-yellow"], html.w-mod-js [data-ix="show-off-button"
 }
 
 .button.guinect-selected img {
-  filter: brightness(0) invert(1) opacity(0.85);
+  filter: brightness(0) invert(1) opacity(0.9);
 }
 
-/* Selected green options */
+/* Selected semaforo options */
 .green_survey_option.guinect-selected {
   background-color: #36a313 !important;
   border-color: #36a313 !important;
   color: #ffffff !important;
-  box-shadow: none !important;
 }
 
-/* Selected yellow options */
 .yellow_survey_option.guinect-selected {
   background-color: #e6bd00 !important;
   border-color: #e6bd00 !important;
   color: #ffffff !important;
-  box-shadow: none !important;
 }
 
-/* Selected red options */
 .red_survey_option.guinect-selected {
   background-color: #ed0b0b !important;
   border-color: #ed0b0b !important;
   color: #ffffff !important;
-  box-shadow: none !important;
 }
 
-/* Selected neutral options */
 .neutral_survey_option.guinect-selected {
-  background-color: #4f6f8f !important;
-  border-color: #4f6f8f !important;
+  background-color: #3f5878 !important;
+  border-color: #3f5878 !important;
   color: #ffffff !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 10px rgba(63, 88, 120, 0.18) !important;
 }
 
+/* Comments */
+.guinect-comment,
+.survey_comments {
+  min-height: 72px !important;
+  max-height: 220px !important;
+  resize: vertical;
+  line-height: 1.45 !important;
+}
+
+/* Submit buttons */
+.guinect-submit-button {
+  background-color: #3f5878 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 16px 36px !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(31, 51, 77, 0.18) !important;
+}
+
+.guinect-submit-button:hover {
+  background-color: #2f4563 !important;
+}
+/* ==================================================
+   GUINECT SURVEY TAB STATES
+================================================== */
+
+/* Current selected survey tab */
+.survey_tab_link.w--current .main_survey_link {
+  background-color: #3f5878 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 18px rgba(31, 51, 77, 0.22) !important;
+}
+
+.survey_tab_link.w--current .main_survey_link img {
+  filter: brightness(0) invert(1) opacity(0.9);
+}
+
+.survey_tab_link.w--current .community_survey_button {
+  color: #1e2233 !important;
+  font-weight: 700 !important;
+}
+
+/* Completed survey tab */
+.survey_tab_link.guinect-survey-completed .main_survey_link {
+  background-color: #f58635 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 18px rgba(245, 134, 53, 0.22) !important;
+}
+
+.survey_tab_link.guinect-survey-completed .main_survey_link img {
+  filter: brightness(0) invert(1) opacity(0.95);
+}
+
+/* If a completed survey is currently selected, keep selected blue */
+.survey_tab_link.guinect-survey-completed.w--current .main_survey_link {
+  background-color: #3f5878 !important;
+  box-shadow: 0 8px 18px rgba(31, 51, 77, 0.22) !important;
+}
